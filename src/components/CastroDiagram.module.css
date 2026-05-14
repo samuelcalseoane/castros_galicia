@@ -1,0 +1,151 @@
+.section.section {
+  background: var(--blanco-calido);
+}
+
+.header {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 0.7rem;
+}
+
+.figure {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.wrapper {
+  min-width: 0;
+  border-top: 1px solid var(--gris-borde);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: var(--space-sm) 0;
+}
+
+.diagram {
+  width: 100%;
+  height: auto;
+}
+
+.callouts line {
+  stroke: rgba(24, 51, 39, 0.42);
+  stroke-width: 1.1;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  fill: var(--verde-ruela);
+  letter-spacing: 0;
+}
+
+.sublabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  fill: var(--texto-secundario);
+}
+
+.keyBox rect {
+  fill: rgba(255, 252, 246, 0.88);
+  stroke: rgba(24, 51, 39, 0.18);
+}
+
+.keyTitle {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 850;
+  fill: var(--verde-ruela);
+}
+
+.keyText {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  line-height: 1.35;
+  fill: var(--texto-secundario);
+}
+
+.notes {
+  list-style: none;
+  display: grid;
+  gap: 0.95rem;
+  counter-reset: diagram;
+}
+
+.notes li {
+  counter-increment: diagram;
+  border-top: 1px solid var(--gris-borde);
+  padding-top: 0.85rem;
+}
+
+.notes li::before {
+  content: counter(diagram, upper-alpha);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1;
+  color: var(--terracota);
+  margin-bottom: 0.45rem;
+}
+
+.notes strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--verde-ruela);
+  margin-bottom: 0.35rem;
+}
+
+.notes span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.52;
+  color: var(--texto-secundario);
+}
+
+@media (max-width: 860px) {
+  .figure {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .notes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .label { font-size: 24px; }
+  .sublabel { font-size: 17px; }
+  .keyTitle { font-size: 19px; }
+  .keyText { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .notes {
+    grid-template-columns: 1fr;
+  }
+
+  .label { font-size: 36px; }
+  .sublabel { font-size: 26px; }
+  .keyTitle { font-size: 28px; }
+  .keyText { font-size: 22px; }
+}

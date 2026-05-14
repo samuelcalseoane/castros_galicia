@@ -1,0 +1,39 @@
+.intro.intro {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 1) 0%, rgba(255, 252, 246, 0.92) 72%, rgba(238, 229, 210, 0.55) 100%);
+}
+
+.layout {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.text {
+  max-width: var(--max-w-text);
+}
+
+.text p {
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  line-height: 1.86;
+  color: var(--texto);
+  margin-bottom: 1.45em;
+}
+
+.text p:first-of-type {
+  font-size: clamp(1.22rem, 2vw, 1.48rem);
+  line-height: 1.72;
+  color: var(--verde-oscuro);
+}
+
+.text p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 4.1em;
+  float: left;
+  line-height: 0.77;
+  margin: 0.08em 0.1em 0 0;
+  color: var(--terracota);
+  font-weight: 900;
+}
+
+

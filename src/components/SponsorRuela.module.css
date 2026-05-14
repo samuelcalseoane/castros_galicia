@@ -1,0 +1,48 @@
+.sponsor.sponsor {
+  background: var(--verde-ruela);
+  color: var(--crema);
+  text-align: center;
+  border-top: 1px solid rgba(244, 239, 228, 0.1);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 1rem;
+}
+
+.brandGroup {
+  margin-bottom: var(--space-md);
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+}
+
+.copy {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(244, 239, 228, 0.88);
+  margin-bottom: 0;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+@media (max-width: 480px) {
+  .logo { height: 36px; }
+}
