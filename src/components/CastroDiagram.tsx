@@ -1,5 +1,7 @@
 import styles from './CastroDiagram.module.css';
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export default function CastroDiagram() {
   return (
     <section className={`section ${styles.section}`}>
@@ -10,7 +12,7 @@ export default function CastroDiagram() {
       </div>
       <div className={styles.figure}>
         <div className={styles.wrapper}>
-          <img src="/assets/castros/anatomia.png" alt="Esquema arquitectónico de un castro gallego" className={styles.diagram} />
+          <img src={assetPath('assets/castros/anatomia.png')} alt="Esquema arquitectónico de un castro gallego" className={styles.diagram} />
         </div>
         <ol className={styles.notes}>
           <li>

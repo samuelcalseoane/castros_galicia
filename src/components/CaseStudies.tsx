@@ -1,11 +1,13 @@
 import styles from './CaseStudies.module.css';
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const cases = [
   {
     id: 'barona',
     title: 'Castro de Baroña',
     place: 'Porto do Son · A Coruña',
-    image: '/assets/castros/barona.jpg',
+    image: assetPath('assets/castros/barona.jpg'),
     imageAlt: 'Vista del castro de Baroña sobre una península rocosa frente al Atlántico',
     credit: 'Foto: Noel Feans · Wikimedia Commons (CC BY 2.0)',
     creditUrl: 'https://commons.wikimedia.org/wiki/File:Castro_de_Baro%C3%B1a.jpg',
@@ -24,7 +26,7 @@ const cases = [
     id: 'santa-trega',
     title: 'Castro de Santa Trega',
     place: 'A Guarda · Pontevedra',
-    image: '/assets/castros/santa-trega.jpg',
+    image: assetPath('assets/castros/santa-trega.jpg'),
     imageAlt: 'Viviendas circulares excavadas en el castro de Santa Trega',
     credit: 'Foto: HombreDHojalata · Wikimedia Commons (CC BY-SA 3.0 ES)',
     creditUrl: 'https://commons.wikimedia.org/wiki/File:Castro_de_Santa_Trega,_2011.jpg',
@@ -43,7 +45,7 @@ const cases = [
     id: 'san-cibrao',
     title: 'Castro de San Cibrao de Las',
     place: 'San Amaro y Punxín · Ourense',
-    image: '/assets/castros/san-cibrao-las.jpg',
+    image: assetPath('assets/castros/san-cibrao-las.jpg'),
     imageAlt: 'Estructuras excavadas en la citania de San Cibrao de Las',
     credit: 'Foto: Luis Miguel Bugallo Sánchez · Wikimedia Commons (CC BY-SA 3.0)',
     creditUrl: 'https://commons.wikimedia.org/wiki/File:2011-06-19._Castro_de_San_Cibrao_de_Las_-_Galiza-3.jpg',
